@@ -1,2 +1,2 @@
 # Java
- Exercícos Java - Curso em Vídeo
+ Exercícios Java - Curso em Vídeo
