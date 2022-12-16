@@ -45,8 +45,12 @@ public class TelaFatorial extends javax.swing.JFrame {
             }
         });
 
+        lblFor.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblFor.setForeground(new java.awt.Color(255, 0, 51));
         lblFor.setText("Fórmula");
 
+        lblRes.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblRes.setForeground(new java.awt.Color(0, 0, 255));
         lblRes.setText("Resultado");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -58,14 +62,14 @@ public class TelaFatorial extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(15, 15, 15)
                         .addComponent(txtFat, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(33, 33, 33)
+                        .addGap(35, 35, 35)
                         .addComponent(btnCalc))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(12, 12, 12)
                         .addComponent(lblFor)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblRes)))
-                .addContainerGap(124, Short.MAX_VALUE))
+                .addContainerGap(59, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -78,7 +82,7 @@ public class TelaFatorial extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblFor)
                     .addComponent(lblRes))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         pack();
