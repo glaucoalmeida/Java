@@ -49,15 +49,18 @@ public class TelaCalculadora extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Super Calculadora");
 
+        jLabel2.setForeground(new java.awt.Color(255, 0, 51));
         jLabel2.setText("Informe um valor:");
 
-        btnCalc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/iconcalc.png"))); // NOI18N
+        btnCalc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/ícone.png"))); // NOI18N
         btnCalc.setText("Calcular");
         btnCalc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCalcActionPerformed(evt);
             }
         });
+
+        panCalc.setForeground(new java.awt.Color(0, 51, 255));
 
         jLabel4.setText("Resto da Divisão por 2");
 
@@ -69,14 +72,19 @@ public class TelaCalculadora extends javax.swing.JFrame {
 
         jLabel8.setText("Valor Absoluto");
 
+        lblRes.setForeground(new java.awt.Color(0, 51, 255));
         lblRes.setText("0");
 
+        lblCub.setForeground(new java.awt.Color(0, 51, 255));
         lblCub.setText("0");
 
+        lblQua.setForeground(new java.awt.Color(0, 51, 255));
         lblQua.setText("0");
 
+        lblCub2.setForeground(new java.awt.Color(0, 51, 255));
         lblCub2.setText("0");
 
+        lblAbs.setForeground(new java.awt.Color(0, 51, 255));
         lblAbs.setText("0");
 
         javax.swing.GroupLayout panCalcLayout = new javax.swing.GroupLayout(panCalc);
@@ -86,15 +94,11 @@ public class TelaCalculadora extends javax.swing.JFrame {
             .addGroup(panCalcLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(panCalcLayout.createSequentialGroup()
-                        .addComponent(jLabel8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(panCalcLayout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING))
                 .addGap(42, 42, 42)
                 .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lblCub)
@@ -130,7 +134,7 @@ public class TelaCalculadora extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/calc.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/imagem.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -172,9 +176,11 @@ public class TelaCalculadora extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnCalc)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3)
-                    .addComponent(panCalc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(panCalc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel3))
                 .addContainerGap(9, Short.MAX_VALUE))
         );
 

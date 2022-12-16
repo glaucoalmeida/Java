@@ -49,6 +49,7 @@ public class TelaFatorial extends javax.swing.JFrame {
         jLabel2.setText("=");
 
         lblRes.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblRes.setForeground(new java.awt.Color(0, 0, 255));
         lblRes.setText("1");
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fatorial-destacada.png"))); // NOI18N
