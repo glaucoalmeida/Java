@@ -38,8 +38,8 @@ public class TelaTriangulo extends javax.swing.JFrame {
         lblB = new javax.swing.JLabel();
         lblC = new javax.swing.JLabel();
         panTri = new javax.swing.JPanel();
-        lblFor = new javax.swing.JLabel();
         lblTipo = new javax.swing.JLabel();
+        lblFor = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         btnVer = new javax.swing.JButton();
 
@@ -56,10 +56,16 @@ public class TelaTriangulo extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 0, 51));
         jLabel1.setText("Segmento A");
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 0, 51));
         jLabel2.setText("Segmento B");
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 0, 51));
         jLabel3.setText("Segmento C");
 
         sliA.setMaximum(20);
@@ -86,41 +92,50 @@ public class TelaTriangulo extends javax.swing.JFrame {
             }
         });
 
+        lblA.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblA.setForeground(new java.awt.Color(0, 51, 255));
         lblA.setText("0");
 
+        lblB.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblB.setForeground(new java.awt.Color(0, 51, 255));
         lblB.setText("0");
 
+        lblC.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblC.setForeground(new java.awt.Color(0, 0, 255));
         lblC.setText("0");
+
+        lblTipo.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblTipo.setForeground(new java.awt.Color(255, 0, 51));
+        lblTipo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTipo.setText("Tipo");
 
         lblFor.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         lblFor.setForeground(new java.awt.Color(0, 51, 255));
         lblFor.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblFor.setText("Forma ou não?");
 
-        lblTipo.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        lblTipo.setForeground(new java.awt.Color(0, 51, 255));
-        lblTipo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTipo.setText("Tipo");
-
         javax.swing.GroupLayout panTriLayout = new javax.swing.GroupLayout(panTri);
         panTri.setLayout(panTriLayout);
         panTriLayout.setHorizontalGroup(
             panTriLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panTriLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(panTriLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblFor, javax.swing.GroupLayout.DEFAULT_SIZE, 474, Short.MAX_VALUE)
-                    .addComponent(lblTipo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(panTriLayout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(lblTipo, javax.swing.GroupLayout.DEFAULT_SIZE, 454, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panTriLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblFor, javax.swing.GroupLayout.PREFERRED_SIZE, 457, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         panTriLayout.setVerticalGroup(
             panTriLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panTriLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panTriLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblFor)
                 .addGap(18, 18, 18)
                 .addComponent(lblTipo)
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addGap(23, 23, 23))
         );
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/triangulo.png"))); // NOI18N
@@ -164,9 +179,9 @@ public class TelaTriangulo extends javax.swing.JFrame {
                                 .addComponent(jLabel10))
                             .addComponent(panTri, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(196, 196, 196)
+                        .addGap(216, 216, 216)
                         .addComponent(btnVer)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -191,9 +206,9 @@ public class TelaTriangulo extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addComponent(jLabel10)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addGap(50, 50, 50)
                 .addComponent(btnVer)
-                .addGap(40, 40, 40)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
                 .addComponent(panTri, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -213,7 +228,7 @@ public class TelaTriangulo extends javax.swing.JFrame {
                    } else if (a!=b && b!=c && a!=c){
                        lblTipo.setText("Triângulo escaleno");
                    } else{
-                       lblTipo.setText("Triângulo isósceles.");
+                       lblTipo.setText("Triângulo isósceles");
                    }
                }
                    else{
