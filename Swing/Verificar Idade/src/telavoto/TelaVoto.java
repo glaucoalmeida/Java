@@ -29,13 +29,13 @@ public class TelaVoto extends javax.swing.JFrame {
 
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        txtAno = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         pnlVer = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         lblIda = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         lblSit = new javax.swing.JLabel();
+        spnAno = new javax.swing.JSpinner();
 
         jLabel2.setText("jLabel2");
 
@@ -44,10 +44,6 @@ public class TelaVoto extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 51, 255));
         jLabel1.setText("Ano de nascimento");
-
-        txtAno.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtAno.setForeground(new java.awt.Color(255, 0, 51));
-        txtAno.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jButton1.setText("Verificar");
@@ -103,32 +99,35 @@ public class TelaVoto extends javax.swing.JFrame {
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
+        spnAno.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        spnAno.setModel(new javax.swing.SpinnerNumberModel(2022, 1900, 2022, 1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(123, 123, 123)
+                .addComponent(jButton1)
+                .addContainerGap(117, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(pnlVer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                        .addComponent(txtAno, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(spnAno, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(38, 38, 38))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(123, 123, 123)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(txtAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(47, 47, 47)
+                    .addComponent(spnAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(49, 49, 49)
                 .addComponent(jButton1)
                 .addGap(18, 18, 18)
                 .addComponent(pnlVer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -140,15 +139,17 @@ public class TelaVoto extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
                  pnlVer.setVisible(true);
-                 int ano = Integer.parseInt(txtAno.getText());
+                 int ano = Integer.parseInt(spnAno.getValue().toString());
                  int idade = 2022 - ano;
                  lblIda.setText(Integer.toString(idade));
-                 if (idade >= 16 && idade <18 || idade > 65){
-                     lblSit.setText("Voto opcional");
-                 }else if (idade >= 18){
-                     lblSit.setText("Voto obrigatório");
+                 if (idade < 16){
+                     lblSit.setText("Voto negado");
                  }else{
-                     lblSit.setText("Não apto");
+                     if (idade >= 16 && idade < 18 || idade > 65)
+                     lblSit.setText("Voto opcional");
+                     else{
+                     lblSit.setText("Voto obrigatório");
+                 }
                  }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -196,6 +197,6 @@ public class TelaVoto extends javax.swing.JFrame {
     private javax.swing.JLabel lblIda;
     private javax.swing.JLabel lblSit;
     private javax.swing.JPanel pnlVer;
-    private javax.swing.JTextField txtAno;
+    private javax.swing.JSpinner spnAno;
     // End of variables declaration//GEN-END:variables
 }
