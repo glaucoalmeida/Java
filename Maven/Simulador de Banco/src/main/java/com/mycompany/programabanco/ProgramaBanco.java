@@ -11,7 +11,7 @@ package com.mycompany.programabanco;
 public class ProgramaBanco {
 
     public static void main(String[] args) {
-        Conta c1 = new Conta(1234,"CP","Marcos");
+        Conta c1 = new Conta(1234,"CP","Glauco");
         c1.status();
     }
 }
